@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{% static 'frontpage/css/frontpage_style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'demo/css/demo_style.css' %}">
+    <title>TechPahadi</title>
+</head>
+<body>
+     <header>{% include 'frontpage/01header.html' %}</header>
+
+    {% include 'frontpage/n8_floatingSidebar.html' %}
+
+    {% block content %} {% endblock content %}
+
+    <footer>{% include 'frontpage/13footer.html' %}</footer>
+
+    <script src="{% static 'frontpage/js/jquery.js' %}"></script>
+    <script src="{% static 'frontpage/js/frontpage.js' %}"></script>
+     <script src="{% static 'demo/js/demo_main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+    // overflow: hidden;
+    overflow: auto;
+}
+
+// main-bgcolor
+// $mainbg-color: rgb(12,2,2);
+
+// form color
+$form-color: rgba(59, 59, 59, 0.644);
+$form-top-shadow: rgb(172, 172, 172);
+$form-bottom-shadow: rgb(20, 20, 20);
+
+
+// input-field color
+$input-bgcolor: rgb(34, 34, 34);
+$input-fontcolor:white;
+$input-fontcolor-placeholder: rgb(189, 189, 189);
+$input-inner-top-shadow: rgb(14, 14, 14);
+$input-inner-bottom-shadow: rgb(116, 116, 116);
+
+// input-field color hover
+// $input-bgcolor-hover: white;
+// $input-fontcolor-hover:white;
+// $input-inner-top-shadow-hover: white;
+// $input-inner-bottom-shadow-hover: white;
+
+// submit-button color
+// $submit-btn-bgcolor: white;
+$submit-btn-font-color: white;
+// $submit-btn-top-shadow: red;
+// $submit-btn-bottom-shadow: red;
+
+// submit-button color hover
+// $submit-btn-top-shadow-hover: red;
+// $submit-btn-bottom-shadow-hover: red;
+// $social-icon-color-hover: white;
+
+// toggle-button color
+// $button-box-color: white;
+// $button-box-top-shadow:white;
+// $button-box-bottom-shadow:white;
+// $btn-color:white;
+
+
+
+// toggle-button color hover
+
+
+
+.hero{
+    // height: 100vh;
+    // min-height: 610px;
+    // width: 100%;
+    // min-width: 500px;
+    // // position: relative;
+    display: flex;
+    // // background: url(/login-signup/images/bg.jpg);
+    // background-repeat: no-repeat;
+    // // background-position: center;
+    // background-size: 100vh;
+
+    .overlay{
+        width: 100%;
+        height: 100vh;
+        min-height: 610px;
+        // min-width: 500px;
+        background:  linear-gradient(rgba(0, 0, 0, 0.582),rgba(0, 0, 0, 0)), url(../images/bg.jpg);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .outer{
+        overflow: hidden;
+        height: 100vh;
+        width: 500px;
+        // min-width: 500px;
+        display: grid;
+        justify-items: center;
+        // grid-gap: minmax(50px, auto);
+        // background: url(../images/svg1.svg),url(../images/svg2.svg);
+        background-repeat: no-repeat;
+        position: relative;
+        margin: auto;
+
+        .logo{
+            // background: rgb(9, 255, 0);
+            z-index: 4;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin-top: 40px;
+            height: 60px;
+            a{
+                text-decoration: none;
+                color: white;
+                h1{
+                    
+                    font-size: 30px;
+                    span{
+                        color: rgb(225, 250, 0);
+                    }
+                }
+            }
+        }
+        .form-box-container{
+            position: relative;
+            width: 100%;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            background: url(../images/svg1.svg),url(../images/svg2.svg);
+            .form-box{
+                max-width: 380px;
+                width: 380px;
+                height: 480px;
+                position: relative;
+                margin-top: 5px;
+                // left: 60px;
+                background:  $form-color;
+                box-shadow: 1px 1px 3px 2px $form-bottom-shadow,-1px -1px 3px 2px $form-top-shadow;
+                padding: 10px;
+                border-radius: 5px;
+                overflow: hidden;
+            
+                .button-box{
+                    box-shadow: 3px 3px 3px 3px rgb(0, 0, 0) inset, -3px -3px 3px 3px rgb(93, 93, 93) inset;
+                    border: 0;
+                    outline: none;
+                    background: rgb(34, 34, 34);
+                    text-align: center;
+                    border-radius: 30px;
+                    width: 220px;
+                    margin: 5% auto;
+                    position: relative;
+            
+                    #btn{
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        width: 110px;
+                        height: 100%;
+                        background:linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 179));
+                        border-radius: 30px;
+                        transition:  .5s;
+                    }
+                    .toggle-btn{
+                        padding: 13px 18px;
+                        cursor: pointer;
+                        background: transparent;
+                        border: 0;
+                        outline: none;
+                        position: relative;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+                }
+                .input-group{
+                    // background: blue;
+                    top: 100px;
+                    position: absolute;
+                    width: 280px;
+                    max-width: 280px;
+                    transition: .5s;
+                }
+                #login{
+                    left: 50px;
+                    top: 110px;
+    
+                    .input-field{
+                        width: 100%;
+                        padding: 15px 0;
+                        margin: 10px auto;
+                        box-shadow: 2px 2px 2px 2px $input-inner-top-shadow  inset, -2px -2px 2px 2px $input-inner-bottom-shadow  inset;
+                        border: 0;
+                        outline: none;
+                        background: $input-bgcolor;
+                        text-align: center;
+                        border-radius: 20px;
+                        color: $input-fontcolor;
+                        &::placeholder{
+                            color: $input-fontcolor-placeholder;
+                        }
+                        &:hover{
+                            box-shadow: 2px 2px 2px 2px $input-inner-bottom-shadow  inset, -2px -2px 2px 2px $input-inner-top-shadow  inset;
+                        }
+                    }
+                    .submit-btn{
+                        width: 100%;
+                        padding: 5px 30px;
+                        cursor: pointer;
+                        margin: 20px 0;
+                        background:linear-gradient(to right, rgb(255, 2, 2), rgb(255, 0, 157));
+                        border: 0;
+                        outline: none;
+                        border-radius: 30px;
+                        text-transform: uppercase;
+                        transition: 0.3s;
+                        color: $submit-btn-font-color;
+                        font-weight: 900;
+                        letter-spacing: 2px;
+                        font-size: 20px;
+                        &:hover{
+                            box-shadow: 1px 1px 6px 2px rgb(0, 0, 0);
+                            transform: translateX(1px);
+                        }
+    
+                    }
+                }
+                #register{
+                    left: 400px;
+                    top: 90px;
+    
+                    .input-field{
+                        width: 100%;
+                        padding: 7px 0;
+                        margin: 4px auto;
+                        box-shadow: 1px 1px 2px 2px $input-inner-top-shadow  inset, -1px -1px 2px 2px $input-inner-bottom-shadow  inset;
+                        border: 0;
+                        outline: none;
+                        background: $input-bgcolor;
+                        text-align: center;
+                        border-radius: 20px;
+                        color: $input-fontcolor;
+                        &::placeholder{
+                            color: $input-fontcolor-placeholder;
+                        } 
+                        &:hover{
+                            box-shadow: 1px 1px 2px 2px $input-inner-bottom-shadow  inset, -1px -1px 2px 2px $input-inner-top-shadow  inset;
+                        }
+                    }
+                    .submit-btn{
+                        margin: 10px 0;
+                        padding: 5px 30px;
+                        width: 100%;  
+                        cursor: pointer;
+                        background:linear-gradient(to right, rgb(255, 2, 2), rgb(255, 0, 157));
+                        border: 0;
+                        outline: none;
+                        border-radius: 30px;
+                        text-transform: uppercase;
+                        transition: 0.3s;
+                        color: $submit-btn-font-color;
+                        font-weight: 900;
+                        letter-spacing: 2px;
+                        font-size: 20px;
+                        &:hover{
+                            box-shadow: 1px 1px 6px 2px rgb(0, 0, 0);
+                            transform: translateX(1px);
+                        }
+                    }
+                }
+                .or{
+                    overflow: hidden;
+                    position: absolute;
+                    top: 360px;
+                    left: 115px;
+                    padding: 3px;
+                    width: 150px;
+                    text-align: center;
+                    background: white;
+                    border-radius: 10px;
+                    font-size: 12px;
+                }
+                .social-login{
+                    display: flex;
+                    position: absolute;
+                    top: 390px;
+                    align-content: center;
+                    align-items: center;
+                    width: 80%;
+                    left: 40px;
+                    #facebook-login, #google-login{
+                        width: 130px;
+                        margin: 10px auto;
+                        padding: 12px 0;
+                        border: 0;
+                        outline: none;
+                        background: rgb(255, 255, 255);
+                        text-align: center;
+                        border-radius: 20px;
+                        transition: 0.4s;
+                        
+                        &:hover{
+                            box-shadow: 1px 1px 6px 2px rgb(255, 255, 255);
+                            transform: translateX(1px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+a:-webkit-any-link { color: -webkit-link !important; }
+
+.form-input{
+    display: block;
+}

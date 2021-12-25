@@ -1,0 +1,375 @@
+
+
+/*************************
+    grid-area: 1/1/2/3;
+    grid-row-start
+    grid-column-start
+    grid-row-end
+    grid-column-end 
+**************************/
+
+#exit.hide{
+    display: none;
+}
+#fullscreen_btn.hide{
+    display: none;
+}
+
+.dd{
+    position: absolute;
+    top: 29px;
+    right: 0;
+    padding: 10px 25px;
+    border-radius: 2px;
+    background: chartreuse;
+    transform-origin: left top;
+    transition: all 0.2s linear;
+    transform: scale(0);
+    
+    &::before{
+        content: "";
+        position: absolute;
+        top: -20px;
+        // left: 50%;
+        border: 10px solid;
+        border-color: transparent transparent blue transparent;
+    }
+    a{
+        text-decoration: none;
+        padding: 6px 5px;
+        margin: 5px;
+        background: wheat;
+        display: block;
+    }
+}
+
+.dd.active{
+    
+    transform: scale(1);
+}
+
+
+header{
+    background: rgb(255, 255, 255);
+    grid-area: 1/1/2/3;
+    display: grid;
+    grid-template-columns: 50px 220px auto;
+    box-shadow: 1px 1px 3px 0px rgb(95, 95, 95);
+    z-index: 200;
+
+    .menu_btn1{
+        align-self: center;
+        // background: blueviolet;
+        padding: 20px 5px 20px 5px;
+        width: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        transition: all 0.2s linear;
+        &:hover{
+            box-shadow: 0 0 4px rgb(155, 155, 155);
+            transform: scale(0.9);
+        }
+        .burger1{
+            width: 30px;
+            height: 4px;
+            background: black;
+            border-radius: 5px;
+            transition: all .3s ease-in-out;
+
+            &::before{
+                content: '';
+                position: absolute;
+                transform: translateY(-10px);
+                width: 35px;
+                height: 4px;
+                background: black;
+                border-radius: 5px;
+                transition: all .3s ease-in-out;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                transform: translateY(10px);
+                width: 35px;
+                height: 4px;
+                background: black;
+                border-radius: 5px;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+    .menu_btn1.open{
+
+        .burger1{
+            transform: translatex(-10px);
+            background: transparent;
+
+            &::before{
+                transform:  rotate(45deg) translate(6px,-6px);
+            }
+            &::after{
+                transform:  rotate(-45deg) translate(6px, 6px);
+            }
+        } 
+    }
+    .logo{
+        align-self: center;
+        // background: chartreuse;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        transition: all 0.2s linear;
+        &:hover{
+            transform: scale(0.95);
+        }
+        a{
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 35px;
+            padding: 1px;
+            margin: 1px 0 1px 20px;
+            color: rgb(0, 0, 0);
+            
+            span{
+                color: rgb(114, 62, 197);
+            }
+        }   
+    }
+ 
+    nav{
+        align-self: center;
+        // background: coral;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 2fr 180px  auto .2fr;
+        grid-template-rows: auto;
+        .search{
+            // background: cornflowerblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            form{
+                display: grid;
+                height: 34px;
+                width: 70%;
+                margin: 0 15px;
+                display: flex;
+                padding: 1px;
+                margin-left: 20px;
+                border-radius: 10px;
+                background: rgb(69, 3, 253);
+                &:hover{
+                    box-shadow: 0 0 5px black;
+                }
+                input[type=search]{
+                    margin: 1px 0 1px 1px;
+                    width: 100%;
+                    background: rgb(5, 5, 5);
+                    color: rgb(255, 255, 255);
+                    font-weight: 600;
+                    border-radius: 10px 0 0 10px;
+                    border: 0;
+                    outline: none;
+                    padding: 5px 10px;
+                    &::placeholder{
+                        font-weight: 600;
+                        color: white;
+                    }
+                    &:hover{
+                        background: white;
+                        color: black;
+                        &::placeholder{
+                            color: black;
+                        }
+                    }
+                }
+                input[type=submit]{
+                    border-radius: 0 10px 10px 0;
+                    border: 2px solid rgb(69, 3, 253);
+                    outline: none;
+                    padding: 0 6px;
+                    color: rgb(0, 0, 0);
+                    background: rgb(255, 255, 255);
+                    &:hover{
+                        border: 2px solid black ;
+                    }
+                }
+            }
+        }
+        .notification{
+            // background: crimson;
+            margin: 15px 50px 0 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            #message{
+                position: relative;
+                cursor: pointer;
+                color: blue;
+                i{
+                    &:hover{
+                        color: rgb(146, 146, 146);
+                        transform: rotate(10deg) scale(1.1);
+                    }
+                }
+                #dd_message{
+                    right: -80px;
+                    background: yellow;
+                    &::before{
+                        left: 30px;
+                    }
+                }
+                
+            }
+            #email{
+                position: relative;
+                color: blue;
+                cursor: pointer;
+                i{
+                    &:hover{
+                        color: rgb(146, 146, 146);
+                        transform: rotate(10deg) scale(1.1);
+                    }
+                }
+                #dd_email{
+                    right: -60px;
+                    &::before{
+                        left: 33px;
+                    }
+                }
+            }
+            #bell{
+                position: relative;
+                color: blue;
+                cursor: pointer;
+                i{
+                    &:hover{
+                        color: rgb(146, 146, 146);
+                        transform: rotate(10deg) scale(1.1);
+                       
+                    }
+                }
+                #dd_bell{
+                    background: yellow;
+                    right: -60px;
+                    &::before{
+                        left: 24px;
+                    }
+                    
+                }
+            }
+        }
+        .rightnav{
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            #fullscreen_toggle{
+                // position: relative;
+               
+                i{    
+                    border-radius: 3px;
+                    margin-right: 30px;
+                    padding: 5px;
+                    box-shadow: 0 0 5px black;
+                    &:hover{
+                        color: blue;
+                        transform: scale(1.1);
+                    }
+                }
+               
+            }
+            #profile{
+                position: relative;
+                align-self: center;
+                background: cyan;
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                box-shadow: 0 0 4px black;
+                border-radius: 10px;
+                padding: 0 2px;
+                transition: all 0.2s linear;
+                &:hover{
+                    box-shadow: 0px 0px 4px 1px black;
+                    // transform: scale(0.95);
+                }
+               img{
+                   margin-top: 5px;
+                   min-height: 35px;
+                   height: 6vh;
+                   border-radius: 50%;
+               } 
+               i{
+                   position: absolute;
+                   right: 19px;
+                   bottom: -1px;
+               }
+               #dd_profile{
+                   transform-origin: right top;
+                   top: 47px;
+                   right: 0px;
+                   &::before{
+                    left: 80px;
+                }
+                
+               }
+            }
+        }
+        
+        .menu_btn2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 10px 5px;
+            .burger2{
+                width: 40px;
+                height: 5px;
+                background: black;
+                border-radius: 5px;
+                transition: all .3s ease-in-out;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    transform: translateY(-12px);
+                    width: 40px;
+                    height: 5px;
+                    background: black;
+                    border-radius: 5px;
+                    transition: all .3s ease-in-out;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    transform: translateY(12px);
+                    width: 40px;
+                    height: 5px;
+                    background: black;
+                    border-radius: 5px;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+        .menu_btn2.open{
+
+            .burger2{
+                transform: translatex(-10px);
+                background: transparent;
+
+                &::before{
+                    transform:  rotate(45deg) translate(6px,-6px);
+                }
+                &::after{
+                    transform:  rotate(-45deg) translate(6px, 6px);
+                }
+            } 
+        }
+    }
+}

@@ -1,0 +1,47 @@
+
+
+table{
+    border-collapse: collapse;
+    width: 100%; 
+    font-weight: bold ; 
+    text-align: left;
+    }
+
+tr{
+    border-bottom: 1px solid rgb(182, 182, 182);
+    &:nth-child(even){
+        background: rgb(243, 243, 243);
+    }
+    &:hover{
+        background: rgb(158, 129, 146);
+    }
+    &:last-of-type{
+        border-bottom: 2px solid  rgb(18, 155, 0) ;
+    }
+}
+
+td, th{
+    white-space: nowrap;
+    padding: 5px;
+
+}
+
+th{
+    padding: 7px;           
+    background: rgb(18, 155, 0);
+    color: white;
+    position: sticky;
+    top: -2px;
+} 
+td{
+    &:first-of-type{
+        padding-left: 9px ;
+   }
+   &:last-of-type{
+        padding-right: 9px;
+   }
+ }
+
+
+
+           

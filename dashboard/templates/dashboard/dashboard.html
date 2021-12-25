@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'dashboard/01db-header.html' %}
+        </header>
+        <div id="id_sidebar" class="cl_sidebar">
+            {% include 'dashboard/02db-sidebar.html' %}
+        </div>
+        <div class="content-wrapper">
+            {% include 'dashboard/db1.html' %}
+            {% include 'dashboard/db2.html' %}
+            {% include 'dashboard/db3.html' %}
+            {% include 'dashboard/db4.html' %}
+        </div>
+    </div>
+
+    <script src="{% static 'dashboard/js/jquery.js' %}"></script>
+    <script src="{% static 'dashboard/js/Chart.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/custom.js' %}"></script>
+    {% comment %} <script src="{% static 'dashboard/js/all.min.js' %}"></script> {% endcomment %}
+    <script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+</body>
+</html>

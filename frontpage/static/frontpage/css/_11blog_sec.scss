@@ -1,0 +1,41 @@
+
+
+
+
+
+#blog-sec{
+    // background-color: rgb(255, 210, 210);
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
+.blogsec-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background: rgb(102, 248, 102);
+}
+.blogsec-body{
+    padding: 20px 100px;
+    // background: yellow;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: repeat(2, minmax(300px, 1fr)) ;
+
+    .blogsec-items{
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+}
+

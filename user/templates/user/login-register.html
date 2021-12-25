@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'user/css/formstyle.css' %}" />
+    <title>Login or Register</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="overlay"></div>
+      <div class="outer">
+        <div class="logo">
+          <a href="{% url 'home' %}"><h1>Tech<span>Pahadi</span></h1></a>
+        </div>
+        <div class="form-box-container">
+          <div class="form-box">
+            <div class="button-box">
+              <div id="btn"></div>
+              <button type="button" id="login_btn" class="toggle-btn">
+                Log In
+              </button>
+              <button type="button" id="register_btn" class="toggle-btn">
+                Register
+              </button>
+            </div>
+
+            <form action="" id="login" class="input-group">
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input-field"
+                placeholder="Username/Email"
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input-field"
+                placeholder="Enter Password"
+                required
+              />
+              <!-- <input type="checkbox" name="" id="" class="check-box"><span>Rember Password</span> -->
+              <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <form action="" id="register" class="input-group">
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input-field"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input-field"
+                placeholder="Phone No."
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input-field"
+                placeholder="Email Id"
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input-field"
+                placeholder="Enter Password"
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                class="input-field"
+                placeholder="Confirm Password"
+                required
+              />
+
+              <!-- <input type="checkbox" name="" id="" class="check-box"><span>I agree to terms and conditions</span> -->
+              <button type="submit" class="submit-btn">Register</button>
+            </form>
+            <div class="or">Or LoginIn/Register with</div>
+            <div class="social-login">
+              <div id="facebook-login">facebook</div>
+              <div id="google-login">google</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="{% static 'user/js/login-signup.js' %}"></script>
+  </body>
+</html>

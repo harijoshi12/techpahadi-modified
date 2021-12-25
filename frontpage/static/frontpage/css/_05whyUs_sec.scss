@@ -1,0 +1,103 @@
+
+
+
+#whyUs-sec{
+    position: relative;
+    padding: 70px 90px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    grid-template-rows: 540px;
+    .sec-whyus-svg{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    }
+.sec-whyus-body-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 2px solid black;
+    .whyus-title{
+
+        h1{
+            font-weight: bolder;
+            font-size: 90px;
+            span{
+                font-size: 70px;
+            }
+        }
+    }
+    a{
+        display: inline-block;
+        transition: all 0.3s;
+        text-decoration: none;
+        background: rgb(0, 140, 255);
+        color: white;
+        padding: 10px;
+        margin: 40px;
+        text-transform: uppercase;
+        border-radius: 20px;
+        font-weight: bolder;
+        border: 1px solid rgb(0, 140, 255);
+        &:hover{
+            background: white;
+            color:  rgb(0, 140, 255);
+            box-shadow: 0 0 5px gray;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.sec-whyus-body-right{
+    // border: 2px solid black;
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+    padding: 7px 60px 20px 60px;
+    .whyus-items{
+        height: 180px;
+        width: 200px;
+        position: absolute;
+        text-align: center;
+        padding: 15px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+    }
+    #why1{
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #why2{
+        top: 85px;
+        left: 5px;
+    }
+    #why3{
+        bottom: 85px;
+        left: 5px;
+    }
+    #why4{
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #why5{
+        top: 85px;
+        right: 5px;
+    }
+    #why6{
+        bottom: 85px;
+        right: 5px;
+    }
+}
+

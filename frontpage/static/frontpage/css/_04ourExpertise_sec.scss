@@ -1,0 +1,53 @@
+
+
+#ourExpertise-sec{
+    height: 180px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+
+    .slide-title{
+        text-align: center;
+        margin: 0;
+        padding: 7px;
+        width: 100%;
+        // background: rgb(102, 248, 102);
+    }
+    .slide-bg{
+        padding: 2px;
+        // background: rgb(229, 255, 0);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+img{
+    height: 100px;
+    margin:0 6px;
+}
+.marquee0{
+    display: flex;
+    justify-content: center;
+}
+
+// .marquee0{
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     &::before, &::after{
+//         height: 100%;
+//         width: 40px;
+//         position: absolute;
+//         content: "";
+//         background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+//         z-index: 6;
+//     }
+//     &::before{
+//         left: 0;
+//         top: 0;
+//     }
+//     &::after{
+//         right: 0;
+//         top: 0;
+//         transform: rotateZ(180deg);
+//     }
+// }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    .form-input{
+        display: block;
+    }
+    .error{
+        color: red;
+    }
+    .success{
+        padding: 20px;
+        background: green;
+        color: white;
+    }
+    .danger{
+        background: red;
+        color: white;
+    }
+    </style>
+
+</head>
+<body>
+     {% if messages %}
+        {% for message in messages %}
+            <p {% if message.tags %} class = "{{message.tags}}"{% endif %} >{{message}}</p>
+        {% endfor %}
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+        {% endfor %}
+        <input type="submit" value="Login">
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p class="danger">{{error}}</p>
+            {% endfor %}
+        {% endif %}
+    </form>
+</body>
+</html>
+
+
+    

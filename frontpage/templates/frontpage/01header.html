@@ -1,0 +1,51 @@
+
+<div class="hr1">
+    <div class="logo">
+        <a href="{% url 'home' %}"
+        ><h1>Tech<span>Pahadi</span></h1></a
+        >
+    </div>
+    <div class="navbar">
+        <nav>
+            <a href="{% url "home" %}">Home</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'pricing' %}">Pricing</a>
+            <a href="{% url "marketplace" %}">MarketPlace</a>
+            <a href="{% url "demo" %}">demo</a>
+            <a href="{% url "career" %}">career</a>
+            <a href="{% url 'blog' %}">Blog</a>
+
+            <div class="navfull">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'dashboard' %}" id="hi User">Dashboard</a>
+                <a href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'register' %}">Register</a>
+                {% endif %}
+            </div>
+            <div class="navsmall">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'register' %}">Register</a>
+                {% endif %}
+            </div>
+        </nav>
+        <div class="rightnav">
+            <div class="navsmall">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'dashboard' %}" id="hi User">Dashboard</a>
+                {% endif %}
+            </div>
+            <a href="" id="cart">Cart</a>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="progress"></div>

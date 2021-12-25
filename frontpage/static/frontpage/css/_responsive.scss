@@ -1,0 +1,57 @@
+
+@media screen and (min-width:1200px){
+    .navfull{
+        background: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navsmall{
+        display: none;
+    }
+    .burger{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1200px){
+    
+    nav.active{
+        transform: scale(1);
+    }
+    .toggle .line1{
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    nav{
+        padding: 20px 0;
+        position: absolute;
+        height: fit-content;
+        width: 300px;
+        top: 10vh;
+        right: 0;
+        background: rgba(0, 0, 0, 0.63);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // justify-content: center;
+        transform-origin: right top;
+        transform: scale(0);
+    }
+    .rightnav{
+        position: absolute;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width:600px){
+    #cart{
+        margin: 3px 5px;
+    }
+}
+

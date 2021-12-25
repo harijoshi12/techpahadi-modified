@@ -1,0 +1,67 @@
+{% load static %}
+<div class="menu_btn1">
+  <div class="burger1"></div>
+</div>
+<div class="logo">
+  <a href="{% url 'home' %}">Tech<span>Pahadi</span></a>
+</div>
+<nav>
+  <div class="search">
+    <form action="" method="get">
+      <input type="search" placeholder="Search" name="" id="" />
+      <input type="submit" value="Search" />
+    </form>
+  </div>
+  <div class="notification">
+    <div class="topmenu" id="message">
+      <i class="fas fa-comments fa-lg"></i>
+      <div class="dd" id="dd_message">
+        <div><a href="">message1</a></div>
+        <div><a href="">message2</a></div>
+        <div><a href="">message2</a></div>
+        <div><a href="">message4</a></div>
+      </div>
+    </div>
+    <div class="topmenu" id="email">
+      <i class="fas fa-envelope fa-lg"></i>
+      <div class="dd" id="dd_email">
+        <div><a href="">email1</a></div>
+        <div><a href="">email2</a></div>
+        <div><a href="">email3</a></div>
+        <div><a href="">email4</a></div>
+      </div>
+    </div>
+    <div class="topmenu" id="bell">
+      <i class="fas fa-bell fa-lg"></i>
+      <div class="dd" id="dd_bell">
+        <div><a href="">bell1</a></div>
+        <div><a href="">bell2</a></div>
+        <div><a href="">bell3</a></div>
+        <div><a href="">bell4</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="rightnav">
+    <div id="fullscreen_toggle">
+      <i id="fullscreen_btn" class="fas fa-expand-arrows-alt fa-lg"></i>
+      <i id="exit" class="fas fa-compress-arrows-alt fa-lg"></i>
+    </div>
+    <div class="topmenu" id="profile">
+      <i class="fas fa-angle-down"></i>
+      <img src="{% static 'dashboard/images/user.jpg' %}" alt="" />
+      <span>Hi! User</span>
+
+      <div class="dd" id="dd_profile">
+        <div><a href="">profile1</a></div>
+        <div><a href="">profiel2</a></div>
+        <div><a href="">profile3</a></div>
+        <div><a href="">profile4</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="menu_btn2">
+                    <div class="burger2">
+                    </div>
+                </div> -->
+</nav>

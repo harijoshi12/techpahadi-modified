@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'frontpage/css/frontpage_style.css' %}"
+    />
+    <title>TechPahadi</title>
+  </head>
+  <body>
+    <header>{% include 'frontpage/01header.html' %}</header>
+
+    {% include 'frontpage/n8_floatingSidebar.html' %}
+
+    {% block content %} {% endblock content %}
+
+    <footer>{% include 'frontpage/13footer.html' %}</footer>
+
+    <script src="{% static 'frontpage/js/jquery.js' %}"></script>
+    <script src="{% static 'frontpage/js/crawler.js' %}"></script>
+    <script src="{% static 'frontpage/js/anime.min.js' %}"></script>
+    <script src="{% static 'frontpage/js/frontpage.js' %}"></script>
+   
+    <script type="text/javascript">
+      marqueeInit({
+        uniqueid: "mycrawler",
+        style: {
+          padding: "5px",
+          width: "85%",
+          background: "white",
+          border: "0",
+        },
+        inc: 5, //speed - pixel increment for each iteration of this marquee's movement
+        mouse: "cursor driven", //mouseover behavior ('pause' 'cursor driven' or false)
+        moveatleast: 2,
+        neutral: 150,
+        persist: true,
+        savedirection: true,
+      });
+    </script>
+  </body>
+</html>

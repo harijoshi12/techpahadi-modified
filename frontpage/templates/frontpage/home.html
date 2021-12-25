@@ -1,0 +1,39 @@
+
+{% extends 'frontpage/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="hero-frontPage">
+        {% include 'frontpage/02hero_frontPage.html' %}
+    </section>
+    <section id="aboutUs-sec">
+        {% include 'frontpage/03aboutUs_sec.html' %}
+    </section>
+    <section id="ourExpertise-sec">
+        {% include 'frontpage/04ourExpertise_sec.html' %}
+    </section>
+    <section id="whyUs-sec">
+        {% include 'frontpage/05whyUs_sec.html' %}
+    </section>
+    <section id="services-sec">
+        {% include 'frontpage/06services_sec.html' %}
+    </section>
+    <section id="pricing-sec">
+        {% include 'frontpage/07pricing_sec.html' %}
+    </section>
+    <section id="clientTestimonial-sec">
+        {% include 'frontpage/08clientTestimonial_sec.html' %}
+    </section>
+    <section id="faqs-sec">
+        {% include 'frontpage/09faqs_sec.html' %}
+    </section>
+    <section id="joinUs-sec">
+        {% include 'frontpage/10joinUs_sec.html' %}
+    </section>
+    <section id="blog-sec">
+        {% include 'frontpage/11blog_sec.html' %}
+    </section>
+    <section id="contactUs-sec">
+        {% include 'frontpage/12contactUs_sec.html' %}
+    </section>
+{% endblock content %}

@@ -1,0 +1,48 @@
+@media screen and (max-width: 600px){
+    .hero{
+        overflow: hidden;
+        .overlay{
+            
+        }
+        .outer{
+            
+            .form-box{
+                $width: 90%;
+                width: $width;
+                .button-box{
+
+                }
+                .input-group{
+                    width: 80%;
+                }
+                #login{
+                    left: 20%;
+                    top: 110px;
+
+                    .input-field{
+
+                    }
+                    .submit-btn{
+                        
+                    }
+                }
+                #register{
+                    left: 400px;
+                    top: 90px;
+                    .input-field{
+
+                    }
+                    .submit-btn{
+                       
+                    }
+                }
+                .or{
+                    left: (150px - 20%) ;
+                }
+                .social-login{
+
+                }
+            }
+        }
+    }  
+}

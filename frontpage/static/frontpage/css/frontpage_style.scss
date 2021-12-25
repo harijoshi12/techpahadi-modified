@@ -1,0 +1,72 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.btn-sec{
+    white-space: nowrap;
+    padding: 5px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 10px rgb(201, 201, 201);
+    }
+}
+.sec-title{
+    margin: 10px;
+}
+.sec-body{
+    height: 100%;
+    width: 90%;
+    padding: 50px 60px;
+    // background: honeydew;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 20px 40px 20px;
+    .sec-item-wrapper{
+
+    }
+}
+
+.box{
+    border: 1px solid grey;
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 0 12px rgb(145, 145, 145);
+    }
+}
+
+@import "01header";
+@import "02hero_frontPage";
+@import "03aboutUs_sec";
+@import "04ourExpertise_sec";
+@import "05whyUs_sec";
+@import "06services_sec";
+@import "07pricing_sec";
+@import "08clientTestimonial_sec";
+@import "09faqs_sec";
+@import "10joinUs_sec";
+@import "11blog_sec";
+@import "12contactUs_sec";
+@import "13footer";
+@import "m2_services";
+@import "m3_pricing";
+@import "m4_marketplace";
+@import "m5_demo";
+@import "m6_career";
+@import "m7_blog";
+@import "n1_whyUs";
+@import "n2_aboutUs";
+@import "n3_contactUs";
+@import "n4_ourExpertise";
+@import "n5_privacyPolicy";
+@import "n6_termsConditions";
+@import "n7_refundPolicy";
+@import "n8_floatingSidebar";
+@import "responsive";
